@@ -7,6 +7,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.event.ClientChatEvent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -41,7 +42,7 @@ public class PremiMod {
         public void onChatMessage(ClientChatReceivedEvent event) {
             EntityPlayerSP player = Minecraft.getMinecraft().player;
 
-            List<String> content = new ArrayList<>(Arrays.asList(event.getMessage().toString().split(" ")));
+            List<String> content = new ArrayList<>(Arrays.asList(event.getMessage().getUnformattedText().split(" ")));
 
             for (String item:content) {
                 if (item.length() == 15 && isStringUpperCase(item)) {
