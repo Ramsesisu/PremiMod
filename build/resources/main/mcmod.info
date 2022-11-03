@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "PremiMod",
+    "name": "PremiMod",
+    "description": "Diese Mod erkennt automatisch Premium-Codes und gibt sie ein, beziehungsweise probiert jede Kombination eines fehlenden Buchstaben (A-Z) aus.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["Ramses (rqmses)"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

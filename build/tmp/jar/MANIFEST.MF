@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: PremiMod
+Implementation-Version: 1.0-SNAPSHOT
+Specification-Title: premimod
+Implementation-Timestamp: 2022-11-03T11:50:50+0100
+Specification-Version: 1
+
