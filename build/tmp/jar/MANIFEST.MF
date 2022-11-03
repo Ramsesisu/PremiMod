@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: PremiMod
-Implementation-Version: 1.0-SNAPSHOT
+Implementation-Version: 1.0
 Specification-Title: premimod
-Implementation-Timestamp: 2022-11-03T11:50:50+0100
+Implementation-Timestamp: 2022-11-03T12:40:39+0100
 Specification-Version: 1
 

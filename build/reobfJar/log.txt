@@ -1,5 +1,5 @@
 Java Launcher: C:\Users\Ramses\.jdks\corretto-1.8.0_332\bin\java.exe
-Arguments: '--in-jar, C:\Users\Ramses\Desktop\Coding\Java\PremiMod\build\libs\PremiMod-1.0-SNAPSHOT.jar, --out-jar, C:\Users\Ramses\Desktop\Coding\Java\PremiMod\build\reobfJar\output.jar, --srg-in, C:\Users\Ramses\Desktop\Coding\Java\PremiMod\build\createMcpToSrg\output.tsrg, --live'
+Arguments: '--in-jar, C:\Users\Ramses\Desktop\Coding\Java\PremiMod\build\libs\PremiMod-1.0.jar, --out-jar, C:\Users\Ramses\Desktop\Coding\Java\PremiMod\build\reobfJar\output.jar, --srg-in, C:\Users\Ramses\Desktop\Coding\Java\PremiMod\build\createMcpToSrg\output.tsrg, --live'
 Classpath:
  - C:\Users\Ramses\.gradle\caches\forge_gradle\maven_downloader\net\md-5\SpecialSource\1.11.0\SpecialSource-1.11.0-shaded.jar
  - C:\Users\Ramses\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.12.2-14.23.5.2860_mapped_stable_39-1.12\forge-1.12.2-14.23.5.2860_mapped_stable_39-1.12-recomp.jar
