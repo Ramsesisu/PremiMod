@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Implementation-Title: PremiMod
-Implementation-Version: 1.0
-Specification-Title: premimod
-Implementation-Timestamp: 2022-11-03T13:01:34+0100
+Specification-Title: elytramod
 Specification-Version: 1
+Implementation-Title: ElytraMod
+Implementation-Version: 1.1
+Implementation-Timestamp: 2022-12-24T16:47:56+0100
 

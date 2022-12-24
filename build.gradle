@@ -1,27 +1,33 @@
-plugins {
-    id 'net.minecraftforge.gradle' version '5.1.+'
+buildscript {
+    repositories {
+        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+    }
 }
 
+apply plugin: 'net.minecraftforge.gradle'
 
-group = 'ramses'
-version = '1.0'
+group = 'me.rqmses'
+version = '1.1'
 
 java {
-    archivesBaseName = 'PremiMod'
+    archivesBaseName = 'ElytraMod'
     toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
 
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
     // Channel:   Version:
-    // official   MCVersion             Official field/method names from Mojang mapping files
-    // parchment  YYYY.MM.DD-MCVersion  Open community-sourced parameter names and javadocs layered on top of official
+    // snapshot   YYYYMMDD   Snapshot are built nightly.
+    // stable     #          Stables are built at the discretion of the MCP team.
+    // official   MCVersion  Official field/method names from Mojang mapping files
     //
-    // You must be aware of the Mojang license when using the 'official' or 'parchment' mappings.
+    // You must be aware of the Mojang license when using the 'official' mappings.
     // See more information here: https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
-    //
-    // Parchment is an unofficial project maintained by ParchmentMC, separate from MinecraftForge
-    // Additional setup is needed to use their mappings: https://github.com/ParchmentMC/Parchment/wiki/Getting-Started
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
@@ -36,12 +42,11 @@ minecraft {
             workingDirectory project.file('run')
 
             // Recommended logging data for a userdev environment
-            // The markers can be added/remove as needed separated by commas.
+            // The markers can be added/removed as needed separated by commas.
             // "SCAN": For mods scan.
             // "REGISTRIES": For firing of registry events.
             // "REGISTRYDUMP": For getting the contents of all registries.
             property 'forge.logging.markers', 'REGISTRIES'
-
 
             // Recommended logging level for the console
             // You can set various levels here.
@@ -50,7 +55,7 @@ minecraft {
 
 
             mods {
-                premimod {
+                elytramod {
                     source sourceSets.main
                 }
             }
@@ -59,13 +64,21 @@ minecraft {
         server {
             workingDirectory project.file('run')
 
+            // Recommended logging data for a userdev environment
+            // The markers can be added/removed as needed separated by commas.
+            // "SCAN": For mods scan.
+            // "REGISTRIES": For firing of registry events.
+            // "REGISTRYDUMP": For getting the contents of all registries.
             property 'forge.logging.markers', 'REGISTRIES'
 
+            // Recommended logging level for the console
+            // You can set various levels here.
+            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
 
             mods {
-                premimod {
+                elytramod {
                     source sourceSets.main
                 }
             }
@@ -109,19 +122,15 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "premimod",
-                //"Specification-Vendor": "premimod authors",
+                "Specification-Title"     : "elytramod",
+                //"Specification-Vendor": "elytramod authors",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                //"Implementation-Vendor": "premimod authors",
+                //"Implementation-Vendor": "elytramod authors",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
 
 jar.finalizedBy('reobfJar')
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
-}
